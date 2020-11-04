@@ -1,0 +1,335 @@
+html {
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: color 150ms ease-out, background-color 150ms ease-out;
+}
+
+body.light-theme {
+  background-color: #fff;
+  color: #333333;
+}
+
+body.dark-theme {
+  background-color: #333333;
+  color: #fff;
+}
+/* .form-container {
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+} */
+
+#search-img {
+  display: block;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: auto;
+}
+
+.headline {
+  display: block;
+  text-align: center;
+  font-family: Ranchers;
+  color: gray;
+  font-size: 100px;
+}
+.headline-item {
+  color: rgb(0, 162, 255);
+  text-decoration-line: underline;
+}
+.desc {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  color: gray;
+}
+
+.search-form {
+  margin-top: 40px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.input {
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.05);
+  height: 40px;
+  margin-right: 10px;
+  border: 1px solid #adb5bd;
+}
+
+.input:hover,
+.input:focus {
+  border-color: #53a5fd;
+  outline: none;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #2196f3;
+  border: 0;
+  outline: 0;
+  padding: 8px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.05);
+  font: inherit;
+  font-weight: 500;
+  user-select: none;
+  transition: background-color 200ms ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.15);
+  background-color: #1976d2;
+}
+
+.load-more-btn {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.button > .spinner.is-hidden {
+  display: none;
+}
+
+.loader {
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #ffffff;
+  background: -moz-linear-gradient(
+    left,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -ms-linear-gradient(
+    left,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  background: linear-gradient(
+    to right,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #ffffff;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+  color: #53a5fd;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1800px;
+  justify-content: space-between;
+}
+
+.gallery-element:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+.gallery-element:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+
+/* .img {
+  max-width: 350px;
+} */
+
+.stats {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.stats-item {
+  display: flex;
+}
+
+.material-icons {
+  margin-right: 5px;
+}
+
+.load-more-btn {
+  margin-bottom: 40px;
+}
+
+.photo-card {
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 23px -10px rgba(194, 194, 194, 1);
+}
+
+/* LIGHTBOX */
+/* 
+.basicLightbox {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0.01;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+  will-change: opacity;
+}
+.basicLightbox--visible {
+  opacity: 1;
+}
+.basicLightbox__placeholder {
+  max-width: 100%;
+  transform: scale(0.9);
+  transition: transform 0.4s ease;
+  z-index: 1;
+  will-change: transform;
+}
+.basicLightbox__placeholder > iframe:first-child:last-child,
+.basicLightbox__placeholder > img:first-child:last-child,
+.basicLightbox__placeholder > video:first-child:last-child {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 95%;
+  max-height: 95%;
+}
+.basicLightbox__placeholder > iframe:first-child:last-child,
+.basicLightbox__placeholder > video:first-child:last-child {
+  pointer-events: auto;
+}
+.basicLightbox__placeholder > img:first-child:last-child,
+.basicLightbox__placeholder > video:first-child:last-child {
+  width: auto;
+  height: auto;
+}
+.basicLightbox--iframe .basicLightbox__placeholder,
+.basicLightbox--img .basicLightbox__placeholder,
+.basicLightbox--video .basicLightbox__placeholder {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.basicLightbox--visible .basicLightbox__placeholder {
+  transform: scale(1);
+} */

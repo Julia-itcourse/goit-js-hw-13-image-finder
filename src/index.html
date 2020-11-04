@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Homework 13</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+  </head>
+  <body>
+    <img src="./images/dog.png.png" alt="dog" id="search-img" />
+    <h1 class="headline">Dog<span class="headline-item">Go</span></h1>
+    <p class="desc">
+      <span class="headline-item">Fast&furious</span> image search
+    </p>
+    <container class="form-container">
+      <form class="search-form js-search-form">
+        <input
+          type="text"
+          name="query"
+          class="input"
+          placeholder="Search images..."
+        />
+
+        <button type="submit" class="button btn btn-primary">Go!</button>
+      </form>
+    </container>
+
+    <ul class="gallery">
+      <!-- Список <li> с карточками изображений -->
+    </ul>
+
+    <button
+      type="button"
+      class="button load-more-btn btn btn-primary is-hidden"
+    >
+      <span
+        class="spinner spinner-border spinner-border-sm is-hidden"
+        role="status"
+        aria-hidden="true"
+      ></span>
+      <span class="label">Show more</span>
+    </button>
+  </body>
+</html>
